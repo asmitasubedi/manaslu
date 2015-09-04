@@ -17,6 +17,30 @@ class Item
     var $photo_url;
 
     /**
+     * Item constructor.
+     * @param $id
+     * @param $title
+     * @param $detail
+     * @param $date
+     * @param $location
+     * @param $status
+     * @param $type
+     * @param $photo_url
+     */
+    public function __construct($id, $title, $detail, $date, $location, $status, $type, $photo_url)
+    {
+        $this->id = $id;
+        $this->title = $title;
+        $this->detail = $detail;
+        $this->date = $date;
+        $this->location = $location;
+        $this->status = $status;
+        $this->type = $type;
+        $this->photo_url = $photo_url;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getId()

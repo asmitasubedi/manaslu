@@ -12,6 +12,19 @@ class  Subcategory
     var  $category_id;
 
     /**
+     * Subcategory constructor.
+     * @param $id
+     * @param $name
+     * @param $category_id
+     */
+    public function __construct($id, $name, $category_id)
+    {
+        $this->id = $id;
+        $this->name = $name;
+        $this->category_id = $category_id;
+    }
+
+    /**
      * @return mixed
      */
     public function getCategoryId()

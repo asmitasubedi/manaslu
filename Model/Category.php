@@ -10,6 +10,12 @@ class Category{
     var $name;
 
     /**
+     * Category constructor.
+     * @param $id
+     * @param $name
+     */
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -41,5 +47,7 @@ class Category{
         $this->name = $name;
     }
 
+
 }
+
 ?>

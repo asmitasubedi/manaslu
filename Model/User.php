@@ -13,6 +13,23 @@ class User{
     var $license_no;
 
     /**
+     * User constructor.
+     * @param $id
+     * @param $username
+     * @param $password
+     * @param $citizenship_no
+     * @param $license_no
+     */
+    public function __construct($id, $username, $password, $citizenship_no, $license_no)
+    {
+        $this->id = $id;
+        $this->username = $username;
+        $this->password = $password;
+        $this->citizenship_no = $citizenship_no;
+        $this->license_no = $license_no;
+    }
+
+    /**
      * @return mixed
      */
     public function getId()

@@ -9,10 +9,12 @@
 <html>
 <head>
 
-
 </head>
 
 <body>
+
+<a href="report.php">Lost Report</a>
+<a href="report.php">Found Report</a>
 
 </body>
 

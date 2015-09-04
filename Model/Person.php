@@ -15,6 +15,27 @@ class Person{
     var $var_type;
 
     /**
+     * Person constructor.
+     * @param $id
+     * @param $f_name
+     * @param $m_name
+     * @param $l_name
+     * @param $email
+     * @param $phone
+     * @param $var_type
+     */
+    public function __construct($id, $f_name, $m_name, $l_name, $email, $phone, $var_type)
+    {
+        $this->id = $id;
+        $this->f_name = $f_name;
+        $this->m_name = $m_name;
+        $this->l_name = $l_name;
+        $this->email = $email;
+        $this->phone = $phone;
+        $this->var_type = $var_type;
+    }
+
+    /**
      * @return mixed
      */
     public function getId()
