@@ -16,6 +16,7 @@ function subCategoryList(){
     return false;
 }
 
+
 function brandList() {
     var subCategoryId = $("#subCategoryList").val();
     $.ajax({
