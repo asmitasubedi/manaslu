@@ -32,15 +32,15 @@ $categoryList=$reportService->categoryList();
 
 <br><br>
 <div id="subCategory">
-    <select>
+    <!--<select>
         <option>Sub Category</option>
-    </select>
+    </select>-->
 </div>
 <br>
 <div id="brandList">
-    <select>
+    <!--<select>
         <option>Brand</option>
-    </select>
+    </select>-->
 </div>
 <br>
 </body>
