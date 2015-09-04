@@ -10,19 +10,22 @@ include '../CommonPage/includeAll.php';
 $categoryId=$_POST["categoryId"];
 
 $subCategoryList=$reportService->subCategoryList($categoryId);
+if(sizeof($subCategoryList)>0){
+    ?>
+    <select name="SubCategory" id="subCategoryList" onchange=" return brandList()">
 
-?>
-<select name="SubCategory" id="subCategoryList" onchange=" return brandList()">
-
-    <option value="subCategory">Sub Category</option>
-    <?php
+        <option value="subCategory">Sub Category</option>
+        <?php
 
         for($i=0;$i<sizeof($subCategoryList);$i++){
 
             echo '<option value='.$subCategoryList[$i]["id"].'>'.$subCategoryList[$i]["SubCategoryName"].'</option>';
 
-    }
-    ?>
-</select>
+        }
+        ?>
+    </select>
+    <?php
+}
+?>
 
 

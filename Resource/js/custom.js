@@ -3,14 +3,7 @@
  */
 function subCategoryList(){
     var categoryId=$("#categoryList").val();
-    if(categoryId=="category")
-    {
-        $("#subCategoryList").val('subCategory');
-        $("#subCategory").hide();
-        $("#brandList").hide();
-        return false;
-
-    }
+    $("#brandList").hide();
     $.ajax({
         type:"POST",
         data:"categoryId="+categoryId,
@@ -25,10 +18,6 @@ function subCategoryList(){
 
 function brandList() {
     var subCategoryId = $("#subCategoryList").val();
-    if(subCategoryId=="subCategory")
-    {
-        $("#brandList").hide();
-    }
     $.ajax({
         type: "POST",
         data: "subCategoryId=" + subCategoryId,

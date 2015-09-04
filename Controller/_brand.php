@@ -11,17 +11,22 @@ $subCategoryId=$_POST["subCategoryId"];
 
 $brandList=$reportService->brandList($subCategoryId);
 
-?>
-<select name="BrandList" id="brandList">
+if(sizeof($brandList)>0){
 
-    <option value="Brand">Brand</option>
-    <?php
-    if($subCategoryId!="subCategory"){
-
-        for($i=0;$i<sizeof($brandList);$i++){
-
-            echo '<option value='.$brandList[$i]["Id"].'>'.$brandList[$i]["BrandName"].'</option>';
-        }
-    }
     ?>
-</select>
+    <select name="BrandList" id="brandList">
+
+        <option value="Brand">Brand</option>
+        <?php
+        if($subCategoryId!="subCategory"){
+
+            for($i=0;$i<sizeof($brandList);$i++){
+
+                echo '<option value='.$brandList[$i]["Id"].'>'.$brandList[$i]["BrandName"].'</option>';
+            }
+        }
+        ?>
+    </select>
+    <?php
+}
+?>
