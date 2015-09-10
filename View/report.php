@@ -9,12 +9,13 @@ include '../CommonPage/includeAll.php';
 
 $categoryList=$reportService->categoryList();
 
+
 ?>
 
 <html>
 
 <head>
-
+<!--    <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>-->
 </head>
 
 <body>
@@ -24,23 +25,18 @@ $categoryList=$reportService->categoryList();
     <option value="category">Category</option>
     <?php
         for($i=0;$i<sizeof($categoryList);$i++){
-            echo $categoryList["CategoryName"];
-            echo '<option value='.$categoryList[$i]["Id"].'>'.$categoryList[$i]["CategoryName"].'</option>';
+            echo '<option value='.$categoryList[$i]["Category_Id"].'>'.$categoryList[$i]["Category_Name"].'</option>';
         }
     ?>
 </select>
 
 <br><br>
 <div id="subCategory">
-    <!--<select>
-        <option>Sub Category</option>
-    </select>-->
+
 </div>
 <br>
 <div id="brandList">
-    <!--<select>
-        <option>Brand</option>
-    </select>-->
+
 </div>
 <br>
 </body>

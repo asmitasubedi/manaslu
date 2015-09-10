@@ -23,7 +23,7 @@ if(sizeof($brandList)>0){
 
             for($i=0;$i<sizeof($brandList);$i++){
 
-                echo '<option value='.$brandList[$i]["Id"].'>'.$brandList[$i]["BrandName"].'</option>';
+                echo '<option value='.$brandList[$i]["Brand_Id"].'>'.$brandList[$i]["Brand_Name"].'</option>';
             }
         }
         ?>

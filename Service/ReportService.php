@@ -23,7 +23,7 @@ class ReportService
 
         $categoryList=array();
 
-        $queryResult=$this->conn->query("SELECT * FROM  Category");
+        $queryResult=$this->conn->query("SELECT * FROM  category");
 
         while($row=mysqli_fetch_assoc($queryResult)){
 
@@ -38,7 +38,7 @@ class ReportService
 
         $subCategoryList=array();
 
-        $queryResult=$this->conn->query("SELECT * FROM  SubCategory WHERE CategoryId='".$categoryId."'");
+        $queryResult=$this->conn->query("SELECT * FROM  subcategory WHERE Category_Id='".$categoryId."'");
 
         while($row=mysqli_fetch_assoc($queryResult)){
 
@@ -52,7 +52,7 @@ class ReportService
     public function brandList($subCategoryId){
         $brandList=array();
 
-        $queryResult=$this->conn->query("SELECT * FROM  Brand WHERE SubCategoryId='".$subCategoryId."'");
+        $queryResult=$this->conn->query("SELECT * FROM  brand WHERE SubCategory_Id='".$subCategoryId."'");
 
         while($row=mysqli_fetch_assoc($queryResult)){
 

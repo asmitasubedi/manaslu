@@ -16,8 +16,7 @@ class DbConnection
      */
     public function __construct()
     {
-        $this->conn =mysqli_connect('localhost','root','phenol69','LostAndFound');
-
+        $this->conn =mysqli_connect('localhost','root','phenol69','manaslu');
 
     }
 
